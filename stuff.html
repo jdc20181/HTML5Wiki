@@ -1,0 +1,36 @@
+<!-- 
+    <link href="node_modules/Prismjs/themes/prism.css" rel="stylesheet" />
+	<script src="node_modules/Prismjs/prism.js"></script>
+
+        
+        <script type="text/javascript">
+var oDoc;
+oDoc = document.getElementById("textBox");
+    function formatDoc(sCmd, sValue) {
+  if (validateMode()) { document.execCommand(sCmd, false, sValue); oDoc.focus(); }
+}
+function validateMode() {
+  if (!document.compForm.switchMode.checked) { return true ; }
+  alert("Uncheck \"Show HTML\".");
+  oDoc.focus();
+  return false;
+}
+
+
+</script>
+<md-button onclick="Prism.tokenize(text_area, Prism.languages.markup)"><ng-md-icon icon="code" style="fill" size="10"></ng-md-icon></md-button>
+<md-button onclick=" formatDoc('cut');"><ng-md-icon  icon="content_cut" style="fill" size="10"></ng-md-icon></md-button>
+<md-button onclick"formatDoc('copy');"><ng-md-icon icon="content_copy" style="fill" size"10"></ng-md-icon></md-button>
+  <md-button onclick"formatDoc('paste');"><ng-md-icon icon="content_paste" style="fill" size"10"></ng-md-icon></md-button>
+  <md-button onclick"FormatDoc('bold');"><ng-md-icon icon="format_bold" style="fill" size"10"></ng-md-icon></md-button>
+  <md-button onclick"formatdoc('italic');"><ng-md-icon icon="format_italic" style="fill" size"10"></ng-md-icon></md-button>
+  <md-button onclick"formatdoc('underline');"><ng-md-icon icon="format_underline" style="fill" size"10"></ng-md-icon></md-button>
+  <md-button onclick"formatdoc('formatblock','blockquote');"><ng-md-icon icon="format_quote" style="fill" size"10"></ng-md-icon></md-button>
+  <md-button onclick"formatdoc('undo');"><ng-md-icon icon="undo" style="fill" size"10"></ng-md-icon></md-button>
+  <md-button onclick"formatdoc('redo');"><ng-md-icon icon="redo" style="fill" size"10"></ng-md-icon></md-button>
+  <md-button onclick"formatdoc('justifycenter');"><ng-md-icon icon="format_align_center" style="fill" size"10"></ng-md-icon></md-button>
+  <md-button onclick"formatdoc('justifyleft');"><ng-md-icon icon="format_align_left" style="fill" size"10"></ng-md-icon></md-button>
+  <md-button onclick"formatdoc('justifyright');"><ng-md-icon icon="format_align_right" style="fill" size"10"></ng-md-icon></md-button>
+  <md-button onclick"formatdoc('removeform');"><ng-md-icon icon="format_clear" style="fill" size"10"></ng-md-icon></md-button>
+  <md-button onclick"Insert link>   var sLnk=prompt('Write the URL here','http:\/\/');if(sLnk&&sLnk!=''&&sLnk!='http://'){formatDoc('createlink',sLnk)}"><ng-md-icon icon="insert_link" style="fill" size"10"></ng-md-icon></md-button>
+ 
